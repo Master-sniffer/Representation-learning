@@ -15,5 +15,6 @@ For energy OOD detection :
 We use the denominator of softmax and apply the nergy transformation for each data point (like explained in the paper, you dont have to explian how energy score is calculates just reference to the energy paper ). You can also find the KDE and thresholding function plot for OOD scores. For this case energy gave worse results in OOd detection than softmax but with very little difference ( just repoting it would be fine bc we are not arguing if energy is better than softmax ) . I have also added true positive rates and other stuff for results of OOd detection using energy scores. Since energy paper concluded that energy score is better than softmax I have only calculates this measures for energy scores.
 
 Segmented notebook :
+Model was trained exactly in same structure , 100 epochs learning rate also fixed to 0.1. 
 Same experiment done with this notebook but now we have the segmneted dataset for brain and segmenetd dataset for chest. You can see that accuracy dropped to 30% and model gave same sfotmax scores thus same energy scores for each image making it impossible to speerate between. For this experiment you can report accuracy dropped to 30 percent and bc accuracy dropped and model gave same softmax score for each image, model did not learn so we OOd also failed.
 
