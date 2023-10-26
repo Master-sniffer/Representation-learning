@@ -40,8 +40,15 @@ A very detailed description and the methodlogy we followed can be found on paper
 
 Contributors names and contact info
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+Sarp Gol : s.gol@student.tue.nl
+
+Horatiu Sicoie : h.sicoie@student.tue.nl
+
+Danila Solodennikov : d.solodennikov@student.tue.nl
+
+Amir Ali Hashemi : s.a.a.hashemi@student.tue.nl
+
+Darshan Sudheer Amadalli : d.s.amadalli@student.tue.nl
 
 
 ## Acknowledgments
