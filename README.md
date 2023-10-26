@@ -19,18 +19,15 @@ A very detailed description and the methodlogy we followed can be found on paper
 * PILImage
 * Numpy
 
-### Links to Datasets
+### Links to Datasets and PTH files 
 
 * [Brain Tumor MRI](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
 * [Bone Break Classifier](https://www.kaggle.com/datasets/amohankumar/bone-break-classifier-dataset?rvi=1)
 * [Chest X-Ray](https://www.kaggle.com/datasets/tolgadincer/labeled-chest-xray-images?rvi=1)
 * [Brain Tumor Dataset (Different Format)](https://www.kaggle.com/datasets/jakeshbohaju/brain-tumor?rvi=1)
 * [Segmented Brain Tumor MRI](https://www.kaggle.com/datasets/sgcoder1/segmented-brain?rvi=1)
+* [PTH Files](https://www.kaggle.com/datasets/sgcoder1/pth-files/settings)
 
-
-### Pth Files
-
-* Related pth files for models can be found under pth folder.
 
 
 ## Help
