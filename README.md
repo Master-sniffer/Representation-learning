@@ -1,20 +1,50 @@
 # Representation-learning
 
-Under Results folder you have two notebooks :
+# Effect of Segmentation on OOD and effect of high Resolution on Energy Scores
 
-normal :
-For this notebbok we have trained a resnet50 on on the original brain dataset. This dataset has 4 classes. 3 disease types and 1 healhty. We got 97 accuracy on test dataset with just training for 100 epochs and a fixed learning rate of 0.1. For this case our IID data is brain dataset and OOD data is chest dataset. For ood detection we know that energy scores work better than softmax scores but to report it I added both of them. 
-How do we do OOD detection using softmax scores  ? 
-After training the model you feed your brain test dataset to model and get softmax scores. After getting the softmax scors for each class you pick the highest softmax score. 
-max_brain = max_softmax_score(brain_softmax_scores)
-max_chest = max_softmax_score(chest_softmax_scores)
+In this project we have explored the effects of segmentation on OOD and classification accuracy. We have also investigated how energy scores perform on high resolution images. 
 
-I have also added a KDE plot which shows the ditsribution of IID(brain dataset )   and OOD(chest dataset) softmax  scores. After that we use a thresholding function. Basically a line seperating these two scores with minimum erorr. The plot under KDE is this one. Also pon top of the table it includes the farction of falsly classified data( OOD or IID not classification error ). 
+## Description
 
-For energy OOD detection :
-We use the denominator of softmax and apply the nergy transformation for each data point (like explained in the paper, you dont have to explian how energy score is calculates just reference to the energy paper ). You can also find the KDE and thresholding function plot for OOD scores. For this case energy gave worse results in OOd detection than softmax but with very little difference ( just repoting it would be fine bc we are not arguing if energy is better than softmax ) . I have also added true positive rates and other stuff for results of OOd detection using energy scores. Since energy paper concluded that energy score is better than softmax I have only calculates this measures for energy scores.
+A very detailed description and the methodlogy we followed can be found on paper. 
+## Structure of the Repo
+* Results for effect of Segmentation on OOD detection and classification accuracy can be found under Results folder which contains 3 experiments.
+* Results for effect of high reoslution on energy scores can be found under High_res_energy_exp folder which contains two experiments. 
 
-Segmented notebook :
-Model was trained exactly in same structure , 100 epochs learning rate also fixed to 0.1. 
-Same experiment done with this notebook but now we have the segmneted dataset for brain and segmenetd dataset for chest. You can see that accuracy dropped to 30% and model gave same sfotmax scores thus same energy scores for each image making it impossible to speerate between. For this experiment you can report accuracy dropped to 30 percent and bc accuracy dropped and model gave same softmax score for each image, model did not learn so we OOd also failed.
+### Dependencies
 
+* Pytorch
+* Python
+* Matplotlib
+* PILImage
+* Numpy
+
+### Links to Datasets
+
+* [Brain Tumor MRI](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
+* [Bone Break Classifier](https://www.kaggle.com/datasets/amohankumar/bone-break-classifier-dataset?rvi=1)
+* [Chest X-Ray](https://www.kaggle.com/datasets/tolgadincer/labeled-chest-xray-images?rvi=1)
+* [Brain Tumor Dataset (Different Format)](https://www.kaggle.com/datasets/jakeshbohaju/brain-tumor?rvi=1)
+* [Segmented Brain Tumor MRI](https://www.kaggle.com/datasets/sgcoder1/segmented-brain?rvi=1)
+
+
+### Pth Files
+
+* Related pth files for models can be found under pth folder.
+
+
+## Help
+* We have found out that segmentation of images takes a lot of processing power and time. To run this experiment on different datasets we recommend powerful GPUs with high memory. 
+
+## Authors
+
+Contributors names and contact info
+
+ex. Dominique Pizzie  
+ex. [@DomPizzie](https://twitter.com/dompizzie)
+
+
+## Acknowledgments
+
+Inspiration, code snippets, etc.
+* [Energy Paper](https://github.com/wetliu/energy_ood)
